@@ -1,0 +1,123 @@
+<ng-template [ngIf]="firstModal">
+    <div class="mod" >
+    <div class="modal-header">
+        <h5 class="modal-title">{{modaltitle}}</h5>
+        <button type="button" class="btn-close" (click)="close()" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+    <p>{{modalbody}}</p></div>
+    <div class="modal-footer">   
+        <button type="button" class="btn btn-primary" (click)="close()">annuler</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+</ng-template>
+
+<ng-template [ngIf]="secondModal">   
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">{{modaltitle}}</h5>
+              <button type="button" class="btn-close" (click)="close()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h1>{{modalbody}}</h1>
+            </div>
+            <div class="modal-footer">
+                         <button type="button" class="btn btn-primary" (click)="close()">OK</button>
+            </div>
+          </div>
+</ng-template>
+
+<ng-template [ngIf]="thirdModal">
+<!-- <form >
+
+
+    <button type="button" class="btn-close" (click)="close()" aria-label="Close"></button>
+<div class="form-group">
+      <label for="exampleFormControlInput1">Email address</label>
+      <input type="email" class="form-control" id="email" placeholder="name@example.com" [(ngModel)]="email" >
+    </div>
+    <div class="form-group">
+     <label for="exampleInputEmail1">name</label>
+      <input type="text" class="form-control"  id="name" placeholder="Esso"   [(ngModel)]="name" [ngModelOptions]="{ standalone: true }">
+      </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Secondname</label>
+      <input type="text" class="form-control" id="secondname" placeholder="clovis" [(ngModel)]="secondname" [ngModelOptions]="{ standalone: true }">
+    </div>
+    <div>
+    <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+  </div>
+  </form>
+ -->
+  
+
+  <form >
+
+
+  <div class="modal-header">
+    <h5 class="modal-title">Symbol</h5>
+    <button type="button" class="btn-close" (click)="close()" aria-label="Close"></button>
+  </div>
+
+
+<div class="form-group">
+    <label for="exampleFormControlInput1">Alert name</label>
+    <input type="numbber" class="form-control" id="email" placeholder="" [(ngModel)]="alertname" [ngModelOptions]="{ standalone: true }" >
+  </div>
+ 
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Sentiment</label>
+    <input type="numbber" class="form-control" id="email" placeholder="" [(ngModel)]="sentiment" [ngModelOptions]="{ standalone: true }" >
+  </div>
+
+  
+<div>
+  <label>Unite time</label>
+  <div class="mx-auto" style="width: 200px;">
+  <label *ngFor="let option of checkboxOptions">
+    <input type="checkbox" name="selectedOptions" [(ngModel)]="selectedOptions[option.value]" />
+    {{ option.label }}
+  </label>
+</div>
+</div>
+  
+  
+<div class="mx-auto" style="width: 200px;">
+  <label>Notification type</label>
+</div>
+
+
+<label >Triggar</label>
+<div>
+  
+  <label *ngFor="let option of checkboxOptions2">
+    <input type="checkbox" name="selectedOptions" [(ngModel)]="selectedOptions2[option.value]" />
+    {{ option.label }}
+  </label>
+  
+</div>
+
+     <div>
+      <label >STATUS</label>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+        <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+      </div>
+     </div>
+
+
+  <div>
+    <button type="submit" class="btn btn-danger" (click)="close()" >close</button>
+  <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+  
+</div>
+</form>
+
+
+
+</ng-template>
+
+
+
+
